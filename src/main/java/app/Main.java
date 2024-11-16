@@ -4,7 +4,7 @@ import app.string.StringManipulator;
 
 public class Main {
     public static void main(String[] args) {
-        String text = "sdsadsadas";
+        String text = "hello world, is homework";
         System.out.println("app start");
 //        anonim class
         MathOperation funcAddition = new MathOperation() {
@@ -19,7 +19,12 @@ public class Main {
 //        ------------
 //        2. lambda
         StringManipulator firstToUppercase = text1 -> {
-            String res = text1.substring(0, 1).toUpperCase() + text1.substring(1);
+            String res = "";
+            if (text1.isEmpty()) {
+                System.out.println("is Empty");
+            } else {
+                res = text1.substring(0, 1).toUpperCase() + text1.substring(1);
+            }
             return res;
         };
         System.out.println(firstToUppercase.firstToUppercaseMethod(text));
